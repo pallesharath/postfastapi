@@ -7,9 +7,9 @@ class name(BaseModel):
     name:str
     rollno:int
     place:str
-    phone:None
-@app.fast("/obj_name")
+    phone:int
+@app.post("/obj_name")
 def name(obj_name:name):
     return{
-        "obj_name":name
+        "obj_name":obj_name
     }
